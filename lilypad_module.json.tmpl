@@ -29,12 +29,13 @@
             "Network": {
                 "Type": "None"
             },
-            "NodeSelectors":
-            {
-                "Key": "architecture",
-                "Operator": In,
-                "Values": ["applesilicon"]
-            },
+            "NodeSelectors": [
+                {
+                    "Key": "architecture",
+                    "Operator": "In",
+                    "Values": ["applesilicon"]
+                }
+            ],
             "Outputs": [
                 {
                 "Name": "outputs",
