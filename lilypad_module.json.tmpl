@@ -1,0 +1,54 @@
+{
+    "machine": {
+        "gpu": 1,
+        "cpu": 1000,
+        "ram": 100
+    },
+    "job": {
+        "APIVersion": "V1beta1",
+        "Metadata": {
+            "CreatedAt": "0001-01-01T00:00:00Z",
+            "Requester": {}
+        },
+        "Spec": {
+            "Deal": {
+                "Concurrency": 1
+            },
+            "Docker": {},
+            "EngineSpec": {
+                "Params": {
+                "Entrypoint": null,
+                "EnvironmentVariables": [],
+                "Image": "zorlin/lilypad-ollama",
+                "Parameters": [
+                ],
+                "WorkingDirectory": ""
+                },
+                "Type": "docker"
+            },
+            "Network": {
+                "Type": "None"
+            },
+            "NodeSelectors":
+            {
+                "key": "architecture",
+                "operator": "In",
+                "values": ["applesilicon"]
+            },
+            "Outputs": [
+                {
+                "Name": "outputs",
+                "Path": "/outputs"
+                }
+            ],
+            "PublisherSpec": {
+                "Type": "ipfs"
+            },
+            "Resources": {},
+            "Timeout": 1800,
+            "Wasm": {
+                "EntryModule": {}
+            }
+        }
+    }
+}
